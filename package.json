@@ -1,19 +1,26 @@
 {
-  "name": "playwright-typescript",
+  "name": "shofy",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
+    "genAuth": "npx playwright test Auth.spec.ts",
     "test": "npx playwright test",
-    "testUI": "npx playwright test --ui",
+    "report": "npx playwright show-report",
+    "test_ui": "npx playwright test --ui",
     "headed": "npx playwright test --headed",
-    "debug": "npx playwright test --debug",
-    "report": "npx playwright show-report"
+    "functional": "npx playwright test --grep @functional",
+    "smoke": "npx playwright test --grep @smoke",
+    "regression": "npx playwright test --grep @regression"
+
   },
   "keywords": [],
+  "author": "",
+  "license": "ISC",
   "type": "commonjs",
   "devDependencies": {
-    "@playwright/test": "^1.62.0",
-    "@types/node": "^26.1.2"
+    "@playwright/test": "^1.62.1",
+    "@types/node": "^26.2.0",
+    "dotenv": "^17.4.2"
   }
 }
